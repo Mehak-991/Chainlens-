@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://chainlens-backend-p3u821qqu-mehak-991s-projects.vercel.app/api/$1"
+      "source": "/api/:path*",
+      "destination": "https://chainlens-backend1.vercel.app/api/:path*"
     }
   ]
 }
