@@ -91,6 +91,23 @@ cd ..
 
 ---
 
+## ☁️ Deployment (Vercel)
+
+This project is configured to be deployed on **Vercel** as two separate projects from the same repository.
+
+### 1. Backend Project
+- **Project Name:** `chainlens-backend`
+- **Root Directory:** `backend`
+- **Environment Variables:** `COGNODB_URI`, `COGNODB_USER`, `COGNODB_PASSWORD`, `ALLOWED_ORIGINS` (Set to the frontend URL).
+
+### 2. Frontend Project
+- **Project Name:** `chainlens-frontend`
+- **Root Directory:** `frontend`
+- **Environment Variables:** 
+  - `VITE_API_BASE_URL`: `.` (A single dot, which enables the API proxy defined in `frontend/vercel.json`).
+
+---
+
 ## 📂 Repository Structure
 
 ```text
