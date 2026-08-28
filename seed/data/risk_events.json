@@ -1,0 +1,14 @@
+[
+  {"id": "risk-01", "name": "Fab Facility Fire", "type": "Fire Disruption", "severity": "High", "status": "Active", "start_date": "2026-08-15", "description": "Silicon wafer cleanroom fire resulting in production outage."},
+  {"id": "risk-02", "name": "Shanghai Port Congestion", "type": "Logistics Delay", "severity": "Medium", "status": "Active", "start_date": "2026-08-20", "description": "Severe vessel backlog delaying shipment processing."},
+  {"id": "risk-03", "name": "Wroclaw Power Loss", "type": "Infrastructure Outage", "severity": "Low", "status": "Resolved", "start_date": "2026-07-10", "description": "Grid power dropouts causing temporary layout downtime."},
+  {"id": "risk-04", "name": "Vietnam Typhoon Flooding", "type": "Natural Disaster", "severity": "High", "status": "Active", "start_date": "2026-08-25", "description": "Heavy rainfall disrupting transport corridors and assembly lines."},
+  {"id": "risk-05", "name": "Silicon Slicing Labor Strike", "type": "Labor Strike", "severity": "Medium", "status": "Resolved", "start_date": "2026-06-01", "description": "Labor negotiations causing brief supply disruption."},
+  {"id": "risk-06", "name": "Connector Pin Material Shortage", "type": "Material Scarcity", "severity": "Low", "status": "Active", "start_date": "2026-08-10", "description": "Copper alloy scarcity impacting raw part availability."},
+  {"id": "risk-07", "name": "Texas Winter Freeze", "type": "Severe Weather", "severity": "High", "status": "Resolved", "start_date": "2026-02-12", "description": "Extreme cold front triggering regional rolling grid blackouts."},
+  {"id": "risk-08", "name": "Active Logistics Shutdown", "type": "Logistics Outage", "severity": "Medium", "status": "Active", "start_date": "2026-08-01", "description": "Cargo airline strike delaying intercontinental shipments."},
+  {"id": "risk-09", "name": "Taiwan Strait Tensions", "type": "Geopolitical", "severity": "High", "status": "Active", "start_date": "2026-08-20", "description": "Geopolitical escalation restricting semiconductor component flows."},
+  {"id": "risk-10", "name": "Rare Earth Export Controls", "type": "Trade Restriction", "severity": "High", "status": "Active", "start_date": "2026-08-18", "description": "Critical mineral export quotas reducing AMOLED panel and chip supply."},
+  {"id": "risk-11", "name": "Hualien Earthquake", "type": "Natural Disaster", "severity": "High", "status": "Active", "start_date": "2026-08-22", "description": "Magnitude 7.1 earthquake disrupting Taiwan-based fabrication facilities."},
+  {"id": "risk-12", "name": "Wafer Fab Cyber Attack", "type": "Cybersecurity", "severity": "High", "status": "Active", "start_date": "2026-08-26", "description": "Ransomware attack on fabrication plant management systems halting output."}
+]

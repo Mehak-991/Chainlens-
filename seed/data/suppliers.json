@@ -1,0 +1,17 @@
+[
+  {"id": "sup-01", "name": "Global Circuits Ltd.", "tier": "Tier 1", "country": "China", "status": "Active"},
+  {"id": "sup-02", "name": "ElectroParts Co.", "tier": "Tier 2", "country": "China", "status": "Active"},
+  {"id": "sup-03", "name": "Vertex Electronics", "tier": "Tier 1", "country": "United States", "status": "Active"},
+  {"id": "sup-04", "name": "NovaCircuits", "tier": "Tier 2", "country": "Germany", "status": "Active"},
+  {"id": "sup-05", "name": "Precision Components Co.", "tier": "Tier 3", "country": "Poland", "status": "Active"},
+  {"id": "sup-06", "name": "Apex Semiconductor", "tier": "Tier 1", "country": "United States", "status": "Active"},
+  {"id": "sup-07", "name": "Pacific Sensors", "tier": "Tier 2", "country": "Vietnam", "status": "Active"},
+  {"id": "sup-08", "name": "Summit Power Corp", "tier": "Tier 2", "country": "Germany", "status": "Active"},
+  {"id": "sup-09", "name": "EuroBatteries", "tier": "Tier 2", "country": "Poland", "status": "Active"},
+  {"id": "sup-10", "name": "IndoPassive Solutions", "tier": "Tier 3", "country": "India", "status": "Active"},
+  {"id": "sup-11", "name": "Matrix Displays", "tier": "Tier 1", "country": "China", "status": "Active"},
+  {"id": "sup-12", "name": "Titan Connectors", "tier": "Tier 3", "country": "Vietnam", "status": "Active"},
+  {"id": "sup-13", "name": "Vector Energy Systems", "tier": "Tier 2", "country": "United States", "status": "Active"},
+  {"id": "sup-14", "name": "Quantum Materials Ltd", "tier": "Tier 3", "country": "India", "status": "Active"},
+  {"id": "sup-15", "name": "Legacy Foundry Inc.", "tier": "Tier 1", "country": "Germany", "status": "Inactive"}
+]

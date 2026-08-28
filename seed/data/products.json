@@ -1,0 +1,17 @@
+[
+  {"id": "prd-01", "name": "Smart Hub v2", "category": "IoT Devices"},
+  {"id": "prd-02", "name": "Industrial Controller Pro", "category": "Industrial Electronics"},
+  {"id": "prd-03", "name": "Telemetry Unit Tracker", "category": "IoT Devices"},
+  {"id": "prd-04", "name": "Automotive ECU Module", "category": "Automotive Electronics"},
+  {"id": "prd-05", "name": "Grid Inverter System", "category": "Energy Systems"},
+  {"id": "prd-06", "name": "Patient Monitor Monitor", "category": "Healthcare Devices"},
+  {"id": "prd-07", "name": "Smart Thermostat Lite", "category": "IoT Devices"},
+  {"id": "prd-08", "name": "Robot Driver Logic", "category": "Industrial Automation"},
+  {"id": "prd-09", "name": "Solar Battery Storage Pack", "category": "Energy Systems"},
+  {"id": "prd-10", "name": "Surgical Display Console", "category": "Healthcare Devices"},
+  {"id": "prd-11", "name": "Fleet Radar Module", "category": "Automotive Electronics"},
+  {"id": "prd-12", "name": "Acoustic Noise Sensor System", "category": "IoT Devices"},
+  {"id": "prd-13", "name": "PLC Modular Rack Unit", "category": "Industrial Electronics"},
+  {"id": "prd-14", "name": "Mobile Charger Block", "category": "Consumer Electronics"},
+  {"id": "prd-15", "name": "Wearable Pulse Monitor", "category": "Healthcare Devices"}
+]

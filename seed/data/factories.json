@@ -1,0 +1,10 @@
+[
+  {"id": "fac-01", "name": "Munich Assembly", "capacity_units_per_year": 120000, "status": "Active"},
+  {"id": "fac-02", "name": "Shenzhen Electronics", "capacity_units_per_year": 500000, "status": "Active"},
+  {"id": "fac-03", "name": "Detroit Powertrain", "capacity_units_per_year": 200000, "status": "Active"},
+  {"id": "fac-04", "name": "Wroclaw PCB Plant", "capacity_units_per_year": 95000, "status": "Active"},
+  {"id": "fac-05", "name": "Austin Assembly Hub", "capacity_units_per_year": 180000, "status": "Active"},
+  {"id": "fac-06", "name": "Gdynia Cleanroom", "capacity_units_per_year": 50000, "status": "Active"},
+  {"id": "fac-07", "name": "Shanghai Fab Tech", "capacity_units_per_year": 1000000, "status": "Active"},
+  {"id": "fac-08", "name": "Bangalore Logic Facility", "capacity_units_per_year": 150000, "status": "Active"}
+]

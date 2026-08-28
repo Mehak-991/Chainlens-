@@ -1,0 +1,8 @@
+[
+  {"id": "reg-01", "name": "East Asia", "country": "China"},
+  {"id": "reg-02", "name": "North America", "country": "United States"},
+  {"id": "reg-03", "name": "Western Europe", "country": "Germany"},
+  {"id": "reg-04", "name": "Southeast Asia", "country": "Vietnam"},
+  {"id": "reg-05", "name": "Eastern Europe", "country": "Poland"},
+  {"id": "reg-06", "name": "South Asia", "country": "India"}
+]

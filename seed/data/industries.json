@@ -1,0 +1,7 @@
+[
+  {"id": "ind-01", "name": "Automotive"},
+  {"id": "ind-02", "name": "Consumer Electronics"},
+  {"id": "ind-03", "name": "Industrial Automation"},
+  {"id": "ind-04", "name": "Energy"},
+  {"id": "ind-05", "name": "Healthcare Devices"}
+]
