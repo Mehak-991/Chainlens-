@@ -1,141 +1,104 @@
-# ChainLens — Supply Chain Dependency & Risk Explorer
-## Project Overview
+# 🌐 ChainLens — Supply Chain Dependency & Risk Explorer
 
 ChainLens is an interactive graph-based analytics application designed to trace and analyze supply chain vulnerabilities. It identifies critical dependencies and explores potential supplier disruption risks across complex multi-tier logistics networks.
 
 The system helps procurement operations and supply chain analysts evaluate what happens if a supplier becomes disrupted. By modeling entities as a graph, it tracks dependencies across:
-**Supplier → Component → Product → Factory → Region**
+
+> **Supplier → Component → Product → Factory → Region**
 
 This structural alignment allows analysts to view downstream blast radiuses, map single-source components, detect alternative supplier possibilities, and view active risk events directly impacting logistics capabilities.
 
-## Technology Stack
+---
 
+## ✨ Core Features
+
+* **Interactive Graph Visualization**: Explore supply chain topologies with a fully interactive network graph (Zoom, Pan, Fit, Node Inspection).
+* **Impact Analysis**: Instantly calculate the downstream blast radius (affected products, factories, and regions) when a supplier goes offline.
+* **Risk Scoring**: Automatic risk tiering (High/Medium/Low) based on active severity alerts and critical bottlenecks.
+* **Single-Source Detection**: Automatically identify components that are exclusively provided by a single supplier.
+
+---
+
+## 🛠️ Technology Stack
+
+* **Frontend**: React + Vite + TypeScript + Cytoscape.js
 * **Backend**: Python + FastAPI
-* **Frontend**: React + Vite + TypeScript
-* **Database**: CognoDB Cloud
-* **Driver**: Official Neo4j Python Driver
-* **Protocol**: Bolt
+* **Database**: CognoDB Cloud (Neo4j)
+* **Driver**: Official Neo4j Python Driver (Bolt Protocol)
 
-## Repository Structure
+---
 
-```text
-chainlens/
-├── backend/            # FastAPI application codebase
-│   ├── app/            # Source code package (routes, services, schemas, queries)
-│   ├── requirements.txt
-│   └── .env.example
-├── frontend/           # Vite + React + TypeScript SPA client code
-│   ├── src/            # Components, pages, hooks, services
-│   ├── package.json
-│   └── .env.example
-├── seed/               # Data files and database populate script
-├── docs/               # Architecture design models & documentation
-└── README.md
-```
+## 🚀 Quick Start (Development)
 
-## CognoDB Setup
-
-1. Create a CognoDB Cloud instance or a compatible Neo4j sandbox instance.
-2. Obtain the Bolt connection URI (e.g. `bolt+s://<instance-id>.databases.cognodb.cloud`).
-3. Save the generated credentials securely.
-4. Configure local environment variables:
-   Create a `.env` file in the `backend/` directory using `backend/.env.example` as a template and populate the values:
-   ```text
-   APP_ENV=development
-   COGNODB_URI=bolt+s://your-cognodb-host
-   COGNODB_USER=cognodb
-   COGNODB_PASSWORD=your-saved-password
-   ```
-5. Run the schema initialization script:
-   ```bash
-   python app/database/setup.py
-   ```
-6. Run the seed data population script:
-   ```bash
-   python ../seed/seed.py
-   ```
-7. Verify the `/api/health` endpoint turns healthy:
-   ```bash
-   curl http://localhost:8000/api/health
-   ```
-
-## Development
-
-Once set up (see **Local Setup** below), start the entire application from the project root:
+If you have already completed the initial setup, you can start the entire application from the project root with a single command:
 
 ```bash
 npm run dev
 ```
 
-This single command automatically starts:
+* **Backend (FastAPI)** will run at `http://localhost:8000`
+* **Frontend (Vite)** will run at `http://localhost:3000`
 
-- **[BACKEND]** FastAPI/Uvicorn → `http://localhost:8000`
-- **[FRONTEND]** Vite → `http://localhost:3000`
+*(Press `Ctrl + C` in the terminal to stop both services simultaneously).*
 
-Press `Ctrl + C` to stop both processes simultaneously.
+---
 
-## Local Setup
+## ⚙️ Initial Setup (First-Time Only)
 
-> **One-time setup only.** After this, use `npm run dev` from the project root.
+Follow these steps to set up the project on a new machine.
 
-### 1. Install Root Dependencies
-
-From the project root (`ChainLens/`):
-
+### 1. Root Dependencies
+From the project root (`ChainLens/`), install the root orchestrator:
 ```bash
 npm install
 ```
 
-### 2. Backend Setup
+### 2. Database (CognoDB) Setup
+1. Create a CognoDB Cloud instance (or Neo4j Sandbox).
+2. Get your Bolt URI (e.g., `bolt+s://<id>.databases.cognodb.cloud`) and password.
 
+### 3. Backend Setup
 ```bash
 cd backend
 python -m venv .venv
 .venv\Scripts\pip install -r requirements.txt
 copy .env.example .env
 ```
-
-Edit `backend/.env` with your CognoDB credentials (see **CognoDB Setup** above).
-
-Return to the project root:
-
-```bash
-cd ..
+Edit the newly created `backend/.env` file and add your database credentials:
+```text
+COGNODB_URI=bolt+s://your-cognodb-host
+COGNODB_USER=neo4j
+COGNODB_PASSWORD=your-password
 ```
 
-### 3. Frontend Setup
+**Initialize Database (Run Once):**
+```bash
+python app/database/setup.py
+python ../seed/seed.py
+```
+*(Return to root: `cd ..`)*
 
+### 4. Frontend Setup
 ```bash
 cd frontend
 npm install
 copy .env.example .env
 cd ..
 ```
+*(No need to edit `frontend/.env` as the defaults connect to localhost:8000).*
 
-### 4. Start Development
-
-From the project root:
-
-```bash
-npm run dev
-```
+**Setup Complete!** You can now run `npm run dev` from the root directory.
 
 ---
 
-> **Independent startup (optional)**
->
-> Backend only:
-> ```bash
-> cd backend
-> .venv\Scripts\uvicorn app.main:app --reload --port 8000
-> ```
->
-> Frontend only:
-> ```bash
-> cd frontend
-> npm run dev
-> ```
+## 📂 Repository Structure
 
-## Phase 7 Status
-
-Phase 7 integrates Cytoscape.js into the React dashboard client layout. It renders deduplicated downstream dependency nodes (Supplier, Component, Product, Factory, Region) and directed relationships (SUPPLIES, USED_IN, PRODUCED_AT, LOCATED_IN), providing full zoom, pan, fit, and node/edge inspector panels.
+```text
+chainlens/
+├── backend/            # FastAPI application codebase (Python)
+├── frontend/           # React SPA client code (Vite + TS)
+├── seed/               # Data files and database populate script
+├── docs/               # Architecture design models & documentation
+├── package.json        # Root orchestrator for running both services
+└── README.md
+```
