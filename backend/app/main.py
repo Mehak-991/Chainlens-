@@ -6,6 +6,7 @@ from app.database.driver import db
 from app.routes import suppliers, risk_events, graph
 from neo4j.exceptions import Neo4jError, ServiceUnavailable
 import logging
+import os
 
 # Configure application logging
 logging.basicConfig(
@@ -33,6 +34,9 @@ app = FastAPI(
 )
 
 # Enable CORS for the local dev environment origin securely
+# Read additional allowed origins from environment (used for production/Vercel deployment)
+_extra_origins = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "").split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -40,7 +44,8 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "http://10.103.121.88:3000",
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
+        *_extra_origins
     ],
     allow_credentials=True,
     allow_methods=["*"],
