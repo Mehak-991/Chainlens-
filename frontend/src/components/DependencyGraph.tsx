@@ -104,8 +104,9 @@ export const DependencyGraph: React.FC<DependencyGraphProps> = ({ paths, selecte
     { selector: "edge:selected", style: { "line-color": "#60a5fa", "target-arrow-color": "#60a5fa", "width": 4 } }
   ];
 
-  const handleCy = (cy: cytoscape.Core) => {
+  const handleCy = React.useCallback((cy: cytoscape.Core) => {
     cyRef.current = cy;
+    cy.removeAllListeners();
     cy.on("tap", (evt) => { if (evt.target === cy) { setSelectedNode(null); setSelectedEdge(null); } });
     cy.on("tap", "node", (evt) => {
       const node = evt.target;
@@ -117,7 +118,7 @@ export const DependencyGraph: React.FC<DependencyGraphProps> = ({ paths, selecte
       setSelectedNode(null);
       setSelectedEdge({ source: edge.data("source"), target: edge.data("target"), type: edge.data("relationship") });
     });
-  };
+  }, []);
 
   const handleFit = () => { if (cyRef.current) cyRef.current.fit(cyRef.current.elements(), 40); };
   const handleZoomIn = () => { if (cyRef.current) cyRef.current.zoom(cyRef.current.zoom() * 1.25); };
