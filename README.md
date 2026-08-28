@@ -1,5 +1,7 @@
 # 🌐 ChainLens — Supply Chain Dependency & Risk Explorer
 
+**Live Demo:** [https://chainlens-frontend1.vercel.app/](https://chainlens-frontend1.vercel.app/)
+
 ChainLens is an interactive graph-based analytics application designed to trace and analyze supply chain vulnerabilities. It identifies critical dependencies and explores potential supplier disruption risks across complex multi-tier logistics networks.
 
 The system helps procurement operations and supply chain analysts evaluate what happens if a supplier becomes disrupted. By modeling entities as a graph, it tracks dependencies across:
